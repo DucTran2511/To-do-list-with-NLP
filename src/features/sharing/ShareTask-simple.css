@@ -1,0 +1,212 @@
+.share-task-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.share-task-modal {
+  background: #1f2937;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #374151;
+}
+
+.share-task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #374151;
+  background: #111827;
+}
+
+.share-task-header h2 {
+  margin: 0;
+  color: #f9fafb;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  color: #f9fafb;
+  background: #374151;
+}
+
+.task-preview {
+  padding: 20px;
+  border-bottom: 1px solid #374151;
+  background: #1f2937;
+}
+
+.task-preview h3 {
+  margin: 0 0 8px 0;
+  color: #f9fafb;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.task-notes {
+  margin: 8px 0;
+  color: #d1d5db;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.task-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.priority-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.priority-high {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.priority-medium {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.priority-low {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.due-date {
+  color: #9ca3af;
+  font-size: 0.8rem;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  color: #60a5fa;
+  font-size: 0.8rem;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.share-form {
+  padding: 20px;
+}
+
+.share-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #f9fafb;
+  font-weight: 500;
+}
+
+.share-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  background: #111827;
+  color: #f9fafb;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.share-form input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.share-form input.error {
+  border-color: #ef4444;
+}
+
+.share-form input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error-message {
+  margin-top: 8px;
+  color: #ef4444;
+  font-size: 0.85rem;
+}
+
+.share-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px;
+  border-top: 1px solid #374151;
+  background: #111827;
+}
+
+.cancel-btn,
+.share-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel-btn {
+  background: none;
+  border: 1px solid #374151;
+  color: #d1d5db;
+}
+
+.cancel-btn:hover:not(:disabled) {
+  background: #374151;
+  color: #f9fafb;
+}
+
+.share-btn {
+  background: #3b82f6;
+  border: 1px solid #3b82f6;
+  color: white;
+}
+
+.share-btn:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.share-btn:disabled,
+.cancel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
